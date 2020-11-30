@@ -2,63 +2,110 @@
   "profile": "tabular-data-package",
   "resources": [
     {
-      "name": "acessos-portal-2020",
-      "path": "acessos-portal.csv",
+      "name": "analytics",
+      "path": "analytics-model.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
           {
-            "name": "abrangencia",
+            "name": "propriedade",
             "type": "string",
             "format": "default",
-            "title": "Abrangência",
-            "description": "Indica a propriedade/domínio ou consulta que está tendo métricas de acesso contabilizadas"
+            "description": " Uma propriedade representa o Website ou aplicação e corresponde ao ponto de captura de dados do site ou da aplicação no Analytics",
+            "title": "Propriedade"
           },
           {
             "name": "sessoes",
-            "type": "any",
-            "format": "default",
-            "title": "Sessões",
-            "description": "Grupo de interações de usuários com um website que ocorrem em um dado período. Uma única sessão pode conter várias exibições de página, eventos, interações sociais e transações de comércio eletrônico."
-          },
-          {
-            "name": "visualizacoes",
             "type": "integer",
             "format": "default",
-            "title": "Visualizações",
-            "description": "Número total de páginas visualizadas, contabilizadas as visualizações repetidas de uma única página"
+            "description": "O período de tempo durante o qual um utilizador está ativo no seu site ou na sua aplicação. Por predefinição, se um utilizador estiver inativo durante 30 minutos ou mais, qualquer atividade futura é atribuída a uma nova sessão. Os utilizadores que saem do seu site e voltam no espaço de 30 minutos são contabilizados como parte da sessão original.",
+            "title": "Sessões"
           },
           {
-            "name": "vizualizacoes_unicas",
+            "name": "tempo_sessao",
+            "type": "number",
+            "format": "default",
+            "title": "Tempo por sessão",
+            "description": "Duração média de uma sessão"
+          },
+          {
+            "name": "paginas",
             "type": "integer",
             "format": "default",
-            "title": "Visualizações Únicas",
+            "description": "Uma instância de uma página carregada (ou atualizada) num navegador. Visualizações de página é uma métrica definida como o número total de páginas visualizadas. Uma visualização de página é definida como uma visualização de uma página no seu site que está a ser acompanhada pelo código de acompanhamento do Google Analytics. Se um utilizador atualizar a página depois de aceder à mesma, esta ação será contabilizada como outra visualização de página. Se um utilizador navegar para uma página diferente e, em seguida, voltar à página original, uma segunda visualização de página será também registada.",
+            "title": "Visualizações de página"
+          },
+          {
+            "name": "paginas_unicas",
+            "type": "integer",
+            "format": "default",
+            "title": "Visualizações de Página Únicas",
             "description": "Número de sessões nas quais a página especificada foi visualizada pelo menos uma vez"
           },
           {
             "name": "entradas",
-            "type": "any",
+            "type": "integer",
             "format": "default",
             "title": "Entradas",
             "description": "Número de vezes que os visitantes acessaram o site através da página especificada"
+          },
+          {
+            "name": "paginas_sessao",
+            "type": "number",
+            "format": "default",
+            "title": "Média de páginas por sessão",
+            "description": "Número médio de páginas visitadas durante uma sessão, incluindo as visualizações repetidas de uma única página"
+          },
+          {
+            "name": "usuarios_novos",
+            "type": "integer",
+            "format": "default",
+            "title": "Número de usuários novos",
+            "description": "Número de utilizadores pela primeira vez durante o intervalo de tempo especificado"
+          },
+          {
+            "name": "usuarios_recorrentes",
+            "type": "integer",
+            "format": "default",
+            "title": "Número de usuários recorrentes"
+          },
+          {
+            "name": "usuarios_totais",
+            "type": "integer",
+            "format": "default",
+            "title": "Número total de usuários"
+          },
+          {
+            "name": "ano",
+            "type": "year",
+            "format": "default",
+            "title": "Ano"
+          },
+          {
+            "name": "mes",
+            "type": "yearmonth",
+            "format": "default",
+            "title": "Mês"
           }
         ]
       },
+      "title": "Analytics",
       "format": "csv",
-      "encoding": "utf-8",
-      "title": "Acessos aos Portais em 2020",
-      "description": "Acessos aos Portais da Transparência, de Dados Abertos e consulta COVID de março a outubro de 2020 segundo métricas definidas pelo Google Anaçytics. "
+      "encoding": "utf-8"
     }
   ],
   "keywords": [
-    "transparência ativa",
-    "analytics",
+    "métricas",
     "acesso",
-    "visualização"
+    "visualizações",
+    "sessões",
+    "páginas",
+    "usuários"
   ],
-  "name": "acessos-portal-ckan",
-  "title": "Acessos aos Portais da Transparência, de Dados Abertos e consulta COVID",
-  "description": "Acessos aos Portais da Transparência, de Dados Abertos e consulta COVID segundo métricas definidas pelo Google Anaçytics. ",
+  "name": "metricas-portais",
+  "title": "Métricas dos portais",
+  "description": "Medidas de acesso das páginas eletrônicas das propriedades (websites) do portal da transparência ([interface](www.transparencia.mg.gov.br) e [CKAN/Dados Abertos](www.dados.mg.gov.br)), definidas a partir das métricas disponibilizadas na conta Google Analytics",
+  "homepage": "https://analytics.google.com/analytics/web/?authuser=1#/report-home/a64127876w99948559p103863874",
   "contributors": [
     {
       "title": "André Amorim",
@@ -67,9 +114,9 @@
   ],
   "licenses": [
     {
-      "name": "CC-BY-4.0",
-      "title": "Creative Commons Attribution 4.0",
-      "path": "https://creativecommons.org/licenses/by/4.0/"
+      "name": "CC0-1.0",
+      "title": "CC0 1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/"
     }
   ]
 }
