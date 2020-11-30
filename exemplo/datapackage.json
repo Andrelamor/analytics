@@ -1,0 +1,75 @@
+{
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "name": "acessos-portal-2020",
+      "path": "acessos-portal.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "abrangencia",
+            "type": "string",
+            "format": "default",
+            "title": "Abrangência",
+            "description": "Indica a propriedade/domínio ou consulta que está tendo métricas de acesso contabilizadas"
+          },
+          {
+            "name": "sessoes",
+            "type": "any",
+            "format": "default",
+            "title": "Sessões",
+            "description": "Grupo de interações de usuários com um website que ocorrem em um dado período. Uma única sessão pode conter várias exibições de página, eventos, interações sociais e transações de comércio eletrônico."
+          },
+          {
+            "name": "visualizacoes",
+            "type": "integer",
+            "format": "default",
+            "title": "Visualizações",
+            "description": "Número total de páginas visualizadas, contabilizadas as visualizações repetidas de uma única página"
+          },
+          {
+            "name": "vizualizacoes_unicas",
+            "type": "integer",
+            "format": "default",
+            "title": "Visualizações Únicas",
+            "description": "Número de sessões nas quais a página especificada foi visualizada pelo menos uma vez"
+          },
+          {
+            "name": "entradas",
+            "type": "any",
+            "format": "default",
+            "title": "Entradas",
+            "description": "Número de vezes que os visitantes acessaram o site através da página especificada"
+          }
+        ]
+      },
+      "format": "csv",
+      "encoding": "utf-8",
+      "title": "Acessos aos Portais em 2020",
+      "description": "Acessos aos Portais da Transparência, de Dados Abertos e consulta COVID de março a outubro de 2020 segundo métricas definidas pelo Google Anaçytics. "
+    }
+  ],
+  "keywords": [
+    "transparência ativa",
+    "analytics",
+    "acesso",
+    "visualização"
+  ],
+  "name": "acessos-portal-ckan",
+  "title": "Acessos aos Portais da Transparência, de Dados Abertos e consulta COVID",
+  "description": "Acessos aos Portais da Transparência, de Dados Abertos e consulta COVID segundo métricas definidas pelo Google Anaçytics. ",
+  "contributors": [
+    {
+      "title": "André Amorim",
+      "role": "author"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "title": "Creative Commons Attribution 4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}
