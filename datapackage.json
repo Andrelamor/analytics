@@ -23,8 +23,8 @@
           },
           {
             "name": "tempo_sessao",
-            "type": "number",
-            "format": "default",
+            "type": "time",
+            "format": "mm:ss",
             "title": "Tempo por sessão",
             "description": "Duração média de uma sessão"
           },
@@ -53,6 +53,7 @@
             "name": "paginas_sessao",
             "type": "number",
             "format": "default",
+            "decimalChar":",",
             "title": "Média de páginas por sessão",
             "description": "Número médio de páginas visitadas durante uma sessão, incluindo as visualizações repetidas de uma única página"
           },
@@ -84,7 +85,7 @@
           {
             "name": "mes",
             "type": "yearmonth",
-            "format": "default",
+            "format": "YYYYMM",
             "title": "Mês"
           }
         ]
