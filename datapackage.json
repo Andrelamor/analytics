@@ -85,7 +85,7 @@
           {
             "name": "mes",
             "type": "yearmonth",
-            "format": "YYYYMM",
+            "format": "YYYY-MM",
             "title": "Mês"
           }
         ]
