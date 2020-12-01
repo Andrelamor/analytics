@@ -3,7 +3,7 @@
   "resources": [
     {
       "name": "analytics",
-      "path": "analytics-model.csv",
+      "path": "analytics.csv",
       "profile": "tabular-data-resource",
       "schema": {
         "fields": [
